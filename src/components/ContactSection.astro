@@ -1,0 +1,118 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+
+<section id="contact" class="section-padding">
+  <div class="container-custom">
+    <h2 class="section-title">Get In Touch</h2>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">
+          Let's Connect
+        </h3>
+        
+        <p class="mb-6 text-dark-300 dark:text-light-300">
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out using the contact form or through my social media profiles.
+        </p>
+        
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-primary-100 dark:bg-primary-900/50 rounded-full text-primary-600 dark:text-primary-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-dark-100 dark:text-light-100">Email</h4>
+              <a href="mailto:your.name@example.com" class="text-primary-600 dark:text-primary-400 hover:underline">your.name@example.com</a>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-primary-100 dark:bg-primary-900/50 rounded-full text-primary-600 dark:text-primary-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-dark-100 dark:text-light-100">Location</h4>
+              <p class="text-dark-300 dark:text-light-300">San Francisco, California</p>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-medium text-dark-100 dark:text-light-100 mb-3">
+            Follow Me
+          </h4>
+          <SocialLinks />
+        </div>
+      </div>
+      
+      <div>
+        <form class="card p-6 lg:p-8">
+          <div class="mb-6">
+            <label for="name" class="block mb-2 text-sm font-medium text-dark-300 dark:text-light-300">
+              Your Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              class="w-full px-4 py-3 bg-light-100 dark:bg-dark-300 border border-light-400 dark:border-dark-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 text-dark-100 dark:text-light-100"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm font-medium text-dark-300 dark:text-light-300">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              class="w-full px-4 py-3 bg-light-100 dark:bg-dark-300 border border-light-400 dark:border-dark-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 text-dark-100 dark:text-light-100"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+          
+          <div class="mb-6">
+            <label for="subject" class="block mb-2 text-sm font-medium text-dark-300 dark:text-light-300">
+              Subject
+            </label>
+            <input
+              type="text"
+              id="subject"
+              class="w-full px-4 py-3 bg-light-100 dark:bg-dark-300 border border-light-400 dark:border-dark-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 text-dark-100 dark:text-light-100"
+              placeholder="Project Inquiry"
+              required
+            />
+          </div>
+          
+          <div class="mb-6">
+            <label for="message" class="block mb-2 text-sm font-medium text-dark-300 dark:text-light-300">
+              Message
+            </label>
+            <textarea
+              id="message"
+              rows="4"
+              class="w-full px-4 py-3 bg-light-100 dark:bg-dark-300 border border-light-400 dark:border-dark-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 text-dark-100 dark:text-light-100 resize-none"
+              placeholder="Your message here..."
+              required
+            ></textarea>
+          </div>
+          
+          <button
+            type="submit"
+            class="w-full btn btn-primary"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

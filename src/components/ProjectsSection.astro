@@ -1,0 +1,179 @@
+---
+const projects = [
+  {
+    id: 1,
+    title: "E-commerce Platform",
+    description: "A modern e-commerce platform with cart functionality, user authentication, and payment processing integration.",
+    image: "https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["React", "Next.js", "Stripe", "Tailwind CSS"],
+    demoLink: "#",
+    codeLink: "#",
+    category: "web"
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    description: "A productivity application with drag-and-drop task management, reminders, and team collaboration features.",
+    image: "https://images.pexels.com/photos/8391140/pexels-photo-8391140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["Vue.js", "Firebase", "Sass"],
+    demoLink: "#",
+    codeLink: "#",
+    category: "web"
+  },
+  {
+    id: 3,
+    title: "Travel Blog",
+    description: "A personal travel blog with a custom CMS, image galleries, and interactive maps showing travel routes.",
+    image: "https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["Astro", "Tailwind CSS", "Markdown"],
+    demoLink: "#",
+    codeLink: "#",
+    category: "web"
+  },
+  {
+    id: 4,
+    title: "Weather Dashboard",
+    description: "A weather application that displays current conditions and forecasts based on user location or search.",
+    image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["JavaScript", "Weather API", "HTML/CSS"],
+    demoLink: "#",
+    codeLink: "#",
+    category: "app"
+  },
+  {
+    id: 5,
+    title: "Portfolio Template",
+    description: "A customizable portfolio template for developers and designers to showcase their work and skills.",
+    image: "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["Astro", "Tailwind CSS", "TypeScript"],
+    demoLink: "#",
+    codeLink: "#",
+    category: "design"
+  },
+  {
+    id: 6,
+    title: "Recipe Sharing Platform",
+    description: "A community-driven platform for sharing and discovering recipes with ratings and comments.",
+    image: "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    technologies: ["React", "Node.js", "MongoDB"],
+    demoLink: "#",
+    codeLink: "#",
+    category: "app"
+  }
+];
+
+const categories = [
+  { id: "all", name: "All Projects" },
+  { id: "web", name: "Web" },
+  { id: "app", name: "Applications" },
+  { id: "design", name: "Design" }
+];
+---
+
+<section id="projects" class="section-padding bg-light-300 dark:bg-dark-200 transition-colors duration-300">
+  <div class="container-custom">
+    <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+    
+    <div class="flex justify-center mb-10">
+      <div class="inline-flex flex-wrap justify-center gap-2 p-1 bg-light-100 dark:bg-dark-300 rounded-lg" role="group" id="project-filters">
+        {categories.map((category, index) => (
+          <button 
+            class={`px-4 py-2 text-sm font-medium rounded-md transition-colors duration-300 ${category.id === 'all' ? 'bg-primary-600 text-white dark:bg-primary-500' : 'bg-transparent text-dark-400 dark:text-light-300 hover:bg-light-400 dark:hover:bg-dark-400'}`}
+            data-filter={category.id}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+      {projects.map((project) => (
+        <div 
+          class="project-card" 
+          data-category={project.category}
+        >
+          <div class="card group h-full flex flex-col">
+            <div class="relative overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-4 w-full">
+                  <div class="flex gap-3 justify-end">
+                    <a 
+                      href={project.demoLink} 
+                      class="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition-colors duration-300"
+                      aria-label="View live demo"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                    </a>
+                    <a 
+                      href={project.codeLink} 
+                      class="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/40 transition-colors duration-300"
+                      aria-label="View source code"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-2 text-dark-100 dark:text-light-100">{project.title}</h3>
+              <p class="text-dark-400 dark:text-light-400 mb-4 flex-grow">{project.description}</p>
+              
+              <div class="flex flex-wrap gap-2 mt-auto">
+                {project.technologies.map(tech => (
+                  <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Project filtering functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary-600', 'text-white', 'dark:bg-primary-500');
+          btn.classList.add('bg-transparent', 'text-dark-400', 'dark:text-light-300', 'hover:bg-light-400', 'dark:hover:bg-dark-400');
+        });
+        
+        button.classList.remove('bg-transparent', 'text-dark-400', 'dark:text-light-300', 'hover:bg-light-400', 'dark:hover:bg-dark-400');
+        button.classList.add('bg-primary-600', 'text-white', 'dark:bg-primary-500');
+        
+        // Filter projects
+        const filter = button.getAttribute('data-filter');
+        
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

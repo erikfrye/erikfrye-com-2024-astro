@@ -1,0 +1,57 @@
+<section id="about" class="section-padding bg-light-300 dark:bg-dark-200 transition-colors duration-300">
+  <div class="container-custom">
+    <h2 class="section-title" data-aos="fade-up">About Me</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1" data-aos="fade-right" data-aos-delay="200">
+        <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">
+          Get to know me
+        </h3>
+        
+        <p class="mb-4">
+          I'm a passionate software developer with a love for creating elegant solutions to complex problems. My journey in tech started over 5 years ago, and I've been on an exciting learning adventure ever since.
+        </p>
+        
+        <p class="mb-4">
+          With a background in computer science and a keen eye for design, I approach each project with a focus on both functionality and user experience. I believe that the best digital products are those that solve real problems while being intuitive and enjoyable to use.
+        </p>
+        
+        <p class="mb-6">
+          When I'm not coding, you can find me hiking in the mountains, experimenting with new recipes in the kitchen, or diving into a good book. I'm a lifelong learner always looking for new challenges and opportunities to grow.
+        </p>
+        
+        <div class="mb-8">
+          <h4 class="text-xl font-medium mb-3">My Skills</h4>
+          <div class="flex flex-wrap gap-2">
+            {['JavaScript', 'TypeScript', 'React', 'Node.js', 'HTML/CSS', 'Tailwind CSS', 'Astro', 'UI/UX Design', 'Git', 'CI/CD'].map(skill => (
+              <span class="px-3 py-1 bg-light-100 dark:bg-dark-300 text-dark-300 dark:text-light-300 rounded-full text-sm">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+        
+        <a href="#experience" class="btn btn-primary">
+          View My Experience
+        </a>
+      </div>
+      
+      <div class="order-1 md:order-2" data-aos="fade-left" data-aos-delay="400">
+        <div class="relative">
+          <!-- Image placeholder with decorative elements -->
+          <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-primary-200 dark:bg-primary-900 rounded-lg z-0"></div>
+          <div class="absolute -top-6 -left-6 w-40 h-40 bg-secondary-200 dark:bg-secondary-900 rounded-lg z-0"></div>
+          
+          <div class="relative z-10 bg-white dark:bg-dark-300 p-3 rounded-lg shadow-md">
+            <!-- Replace with your actual image -->
+            <img
+              src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="About me image"
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,91 @@
+---
+const experiences = [
+  {
+    id: 1,
+    role: "Senior Frontend Developer",
+    company: "Tech Innovations Inc.",
+    period: "2021 - Present",
+    description: "Lead the development of the company's flagship product, implementing new features and improving performance. Mentored junior developers and introduced best practices for code quality.",
+    technologies: ["React", "TypeScript", "GraphQL", "Tailwind CSS"],
+    logo: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    id: 2,
+    role: "Frontend Developer",
+    company: "Digital Solutions Agency",
+    period: "2018 - 2021",
+    description: "Worked on various client projects, building responsive web applications and e-commerce solutions. Collaborated with designers to implement pixel-perfect UI components.",
+    technologies: ["JavaScript", "React", "Node.js", "SCSS"],
+    logo: "https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    id: 3,
+    role: "Junior Web Developer",
+    company: "StartUp Ventures",
+    period: "2016 - 2018",
+    description: "Assisted in the development of web applications for early-stage startups. Learned modern development practices and gained experience in full-stack development.",
+    technologies: ["HTML/CSS", "JavaScript", "PHP", "MySQL"],
+    logo: "https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  }
+];
+---
+
+<section id="experience" class="section-padding">
+  <div class="container-custom">
+    <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+    
+    <div class="max-w-4xl mx-auto">
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-0 md:left-1/2 h-full w-0.5 bg-primary-200 dark:bg-primary-800 transform md:-translate-x-1/2"></div>
+        
+        {experiences.map((exp, index) => (
+          <div 
+            class={`relative mb-12 md:mb-16 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'} md:w-1/2 ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'}`}
+            data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+            data-aos-delay={(index * 100) + 200}
+          >
+            <!-- Timeline dot -->
+            <div class="absolute top-0 left-0 md:left-auto md:right-0 w-4 h-4 rounded-full bg-primary-500 dark:bg-primary-400 transform md:translate-x-1/2 -translate-y-1/2 shadow-md">
+              <div class="w-2 h-2 rounded-full bg-white dark:bg-dark-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+            </div>
+            
+            <div class={`ml-8 md:ml-0 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
+              <div class="card p-6">
+                <div class="flex items-center gap-4 mb-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-light-300 dark:bg-dark-300 flex items-center justify-center">
+                    <img 
+                      src={exp.logo} 
+                      alt={`${exp.company} logo`} 
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400">{exp.role}</h3>
+                    <p class="text-dark-400 dark:text-light-400">{exp.company}</p>
+                  </div>
+                </div>
+                
+                <div class="mb-3 text-sm font-medium text-dark-400 dark:text-light-400">
+                  {exp.period}
+                </div>
+                
+                <p class="mb-4 text-dark-300 dark:text-light-300">
+                  {exp.description}
+                </p>
+                
+                <div class="flex flex-wrap gap-2">
+                  {exp.technologies.map(tech => (
+                    <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

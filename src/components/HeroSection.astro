@@ -1,0 +1,50 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+
+<section id="hero" class="min-h-screen flex items-center pt-20 pb-16 md:pb-24">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right" data-aos-delay="200">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+          <span class="block">Hi, I'm</span>
+          <span class="block text-primary-600 dark:text-primary-400">Your Name</span>
+        </h1>
+        <h2 class="text-xl sm:text-2xl text-dark-400 dark:text-light-300 mb-6">
+          Professional <span class="font-medium text-primary-600 dark:text-primary-400">Software Developer</span> creating beautiful digital experiences
+        </h2>
+        <p class="text-dark-300 dark:text-light-400 max-w-xl mb-8">
+          I'm a passionate developer with 5+ years of experience building web applications
+          with modern technologies. I specialize in creating intuitive, accessible, and
+          performance-optimized websites.
+        </p>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="btn btn-primary">
+            Contact Me
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            View My Work
+          </a>
+        </div>
+        
+        <div class="mt-8">
+          <SocialLinks />
+        </div>
+      </div>
+      
+      <div class="hidden lg:block" data-aos="fade-left" data-aos-delay="400">
+        <div class="relative">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full blur opacity-70"></div>
+          <div class="relative bg-light-100 dark:bg-dark-200 rounded-full p-2">
+            <img 
+              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              alt="Portrait photo" 
+              class="w-full rounded-full shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

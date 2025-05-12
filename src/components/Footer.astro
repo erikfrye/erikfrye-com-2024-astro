@@ -1,0 +1,27 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-light-100 dark:bg-dark-300 py-8 transition-colors duration-300">
+  <div class="container-custom">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <a href="#" class="text-xl font-bold text-primary-600 dark:text-primary-400">
+          YourName
+        </a>
+        <p class="mt-2 text-sm text-dark-400 dark:text-light-400">
+          Creating beautiful digital experiences
+        </p>
+      </div>
+      
+      <div class="flex flex-col items-center md:items-end">
+        <p class="text-sm text-dark-400 dark:text-light-400">
+          &copy; {currentYear} YourName. All rights reserved.
+        </p>
+        <p class="text-xs text-dark-300 dark:text-light-500 mt-1">
+          Built with <span class="text-accent-600 dark:text-accent-400">❤️</span> using Astro and Tailwind CSS
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,89 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const navItems = [
+  { name: 'Home', url: '#hero' },
+  { name: 'About', url: '#about' },
+  { name: 'Experience', url: '#experience' },
+  { name: 'Projects', url: '#projects' },
+  { name: 'Contact', url: '#contact' },
+];
+---
+
+<header class="fixed top-0 w-full bg-white/80 dark:bg-dark-100/80 backdrop-blur-md z-50 shadow-sm py-4 transition-colors duration-300">
+  <div class="container-custom">
+    <div class="flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-600 dark:text-primary-400">
+        YourName
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <nav>
+          <ul class="flex space-x-6">
+            {navItems.map(item => (
+              <li>
+                <a 
+                  href={item.url} 
+                  class="text-dark-300 dark:text-light-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        
+        <ThemeToggle />
+      </div>
+      
+      <div class="flex items-center md:hidden">
+        <ThemeToggle />
+        <button id="mobile-menu-button" class="ml-4 text-dark-300 dark:text-light-300 hover:text-primary-600 dark:hover:text-primary-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-200 shadow-md">
+    <div class="container-custom py-4">
+      <nav>
+        <ul class="space-y-4">
+          {navItems.map(item => (
+            <li>
+              <a 
+                href={item.url} 
+                class="block text-dark-300 dark:text-light-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script>
