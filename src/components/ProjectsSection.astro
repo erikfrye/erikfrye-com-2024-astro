@@ -90,8 +90,9 @@ const categories = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
       {projects.map((project) => (
         <div 
-          class="project-card" 
+          class="project-card"
           data-category={project.category}
+          data-aos="fade-up"
         >
           <div class="card group h-full flex flex-col">
             <div class="relative overflow-hidden">
@@ -145,35 +146,3 @@ const categories = [
     </div>
   </div>
 </section>
-
-<script>
-  // Project filtering functionality
-  document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('[data-filter]');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Update active button
-        filterButtons.forEach(btn => {
-          btn.classList.remove('bg-primary-600', 'text-white', 'dark:bg-primary-500');
-          btn.classList.add('bg-transparent', 'text-dark-400', 'dark:text-light-300', 'hover:bg-light-400', 'dark:hover:bg-dark-400');
-        });
-        
-        button.classList.remove('bg-transparent', 'text-dark-400', 'dark:text-light-300', 'hover:bg-light-400', 'dark:hover:bg-dark-400');
-        button.classList.add('bg-primary-600', 'text-white', 'dark:bg-primary-500');
-        
-        // Filter projects
-        const filter = button.getAttribute('data-filter');
-        
-        projectCards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category') === filter) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  });
-</script>
