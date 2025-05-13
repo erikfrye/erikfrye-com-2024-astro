@@ -11,7 +11,7 @@
   }
   
   body {
-    @apply bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300;
+    @apply bg-light-background dark:bg-dark-background text-dark-text dark:text-light-text transition-colors duration-300;
     font-family: 'Inter', sans-serif;
   }
 
