@@ -11,7 +11,7 @@
   }
   
   body {
-    @apply bg-background text-white transition-colors duration-300;
+    @apply bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300;
     font-family: 'Inter', sans-serif;
   }
 
@@ -20,7 +20,7 @@
   }
 
   p {
-    @apply leading-relaxed text-muted;
+    @apply leading-relaxed text-light-muted dark:text-dark-muted;
   }
 }
 
@@ -30,7 +30,7 @@
   }
   
   .section-title {
-    @apply text-3xl font-bold text-center mb-12 md:mb-16 lg:text-4xl text-white;
+    @apply text-3xl font-bold text-center mb-12 md:mb-16 lg:text-4xl text-light-text dark:text-dark-text;
   }
   
   .section-padding {
@@ -42,18 +42,18 @@
   }
   
   .btn-primary {
-    @apply bg-primary/20 text-primary border border-primary/30 backdrop-blur-sm hover:bg-primary/30;
+    @apply bg-light-primary/90 dark:bg-dark-primary/20 text-white dark:text-dark-primary border-0 dark:border dark:border-dark-primary/30 backdrop-blur-sm hover:bg-light-primary dark:hover:bg-dark-primary/30;
   }
   
   .btn-secondary {
-    @apply bg-secondary/20 text-secondary border border-secondary/30 backdrop-blur-sm hover:bg-secondary/30;
+    @apply bg-light-secondary/90 dark:bg-dark-secondary/20 text-white dark:text-dark-secondary border-0 dark:border dark:border-dark-secondary/30 backdrop-blur-sm hover:bg-light-secondary dark:hover:bg-dark-secondary/30;
   }
   
   .btn-outline {
-    @apply border-2 border-primary text-primary hover:bg-primary/20 backdrop-blur-sm;
+    @apply border-2 border-light-primary dark:border-dark-primary text-light-primary dark:text-dark-primary hover:bg-light-primary/10 dark:hover:bg-dark-primary/20 backdrop-blur-sm;
   }
 
   .card {
-    @apply bg-surface/40 backdrop-blur-sm border border-white/10 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-white/20;
+    @apply bg-light-surface/90 dark:bg-dark-surface/40 backdrop-blur-sm border border-light-primary/10 dark:border-dark-white/10 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-light-primary/20 dark:hover:border-dark-white/20;
   }
 }

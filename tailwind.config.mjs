@@ -8,29 +8,34 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        background: '#0F0F1A',
-        surface: '#1A1A2E',
-        primary: {
-          DEFAULT: '#00FFE7',
-          light: '#66FFF1',
-          dark: '#00CCB9'
+        light: {
+          background: '#F9FAFB',
+          surface: '#FFFFFF',
+          primary: '#4F46E5',
+          secondary: '#EC4899',
+          accent: '#6366F1',
+          info: '#38BDF8',
+          warning: '#FBBF24',
+          success: '#10B981',
+          danger: '#EF4444',
+          muted: '#6B7280',
+          text: '#111827',
+          white: '#ffffff',
         },
-        secondary: {
-          DEFAULT: '#FF00D4',
-          light: '#FF66E5',
-          dark: '#CC00AA'
-        },
-        accent: {
-          DEFAULT: '#8C52FF',
-          light: '#B08FFF',
-          dark: '#6E41CC'
-        },
-        info: '#38BDF8',
-        warning: '#FBBF24',
-        success: '#00FF85',
-        danger: '#FF4C4C',
-        muted: '#8890A5',
-        white: '#F9FAFB'
+        dark: {
+          background: '#0F0F1A',
+          surface: '#1A1A2E',
+          primary: '#00FFE7',
+          secondary: '#FF00D4',
+          accent: '#8C52FF',
+          info: '#38BDF8',
+          warning: '#FBBF24',
+          success: '#00FF85',
+          danger: '#FF4C4C',
+          muted: '#8890A5',
+          text: '#F9FAFB',
+          white: '#F9FAFB',
+        }
       },
       backdropBlur: {
         xs: '2px',
