@@ -1,10 +1,10 @@
-<section id="about" class="section-padding bg-light-300 dark:bg-dark-200 transition-colors duration-300">
+<section id="about" class="section-padding bg-surface/40 backdrop-blur-sm">
   <div class="container-custom">
     <h2 class="section-title" data-aos="fade-up">About Me</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="order-2 md:order-1" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">
+      <div class="order-2 md:order-1" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-primary mb-4">
           Get to know me
         </h3>
         
@@ -21,10 +21,10 @@
         </p>
         
         <div class="mb-8">
-          <h4 class="text-xl font-medium mb-3">My Skills</h4>
+          <h4 class="text-xl font-medium mb-3 text-white">My Skills</h4>
           <div class="flex flex-wrap gap-2">
             {['JavaScript', 'TypeScript', 'React', 'Node.js', 'HTML/CSS', 'Tailwind CSS', 'Astro', 'UI/UX Design', 'Git', 'CI/CD'].map(skill => (
-              <span class="px-3 py-1 bg-light-100 dark:bg-dark-300 text-dark-300 dark:text-light-300 rounded-full text-sm">
+              <span class="px-3 py-1 bg-surface/60 text-white/80 rounded-full text-sm border border-white/10">
                 {skill}
               </span>
             ))}
@@ -36,14 +36,13 @@
         </a>
       </div>
       
-      <div class="order-1 md:order-2" data-aos="fade-up" data-aos-delay="400">
+      <div class="order-1 md:order-2" data-aos="fade-up">
         <div class="relative">
           <!-- Image placeholder with decorative elements -->
-          <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-primary-200 dark:bg-primary-900 rounded-lg z-0"></div>
-          <div class="absolute -top-6 -left-6 w-40 h-40 bg-secondary-200 dark:bg-secondary-900 rounded-lg z-0"></div>
+          <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-primary/20 rounded-lg z-0"></div>
+          <div class="absolute -top-6 -left-6 w-40 h-40 bg-secondary/20 rounded-lg z-0"></div>
           
-          <div class="relative z-10 bg-white dark:bg-dark-300 p-3 rounded-lg shadow-md">
-            <!-- Replace with your actual image -->
+          <div class="relative z-10 bg-surface/60 p-3 rounded-lg shadow-md backdrop-blur-sm border border-white/10">
             <img
               src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt="About me image"
