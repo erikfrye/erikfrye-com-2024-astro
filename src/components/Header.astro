@@ -13,7 +13,7 @@ const navItems = [
 <header class="fixed top-0 w-full bg-surface/40 backdrop-blur-md z-50 border-b border-white/10 py-4">
   <div class="container-custom">
     <div class="flex items-center justify-between">
-      <a href="#" class="text-xl font-bold dark:text-dark-primary text-light-primary">
+      <a href="#" class="text-xl font-bold text-light-primary dark:text-dark-primary">
         YourName
       </a>
       
@@ -24,7 +24,7 @@ const navItems = [
               <li>
                 <a 
                   href={item.url} 
-                  class="text-light-text dark:text-dark-text hover:text-light-primary dark:hover:text-dark-primary font-medium transition-colors duration-300"
+                  class="text-light-text dark:text-dark-text hover:text-light-primary dark:hover:text-dark-primary transition-colors duration-300"
                 >
                   {item.name}
                 </a>
@@ -38,7 +38,7 @@ const navItems = [
       
       <div class="flex items-center md:hidden">
         <ThemeToggle />
-        <button id="mobile-menu-button" class="ml-4 text-white/70 hover:text-primary">
+        <button id="mobile-menu-button" class="ml-4 text-light-text dark:text-dark-text hover:text-light-primary dark:hover:text-dark-primary">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -56,7 +56,7 @@ const navItems = [
             <li>
               <a 
                 href={item.url} 
-                class="block text-white/70 hover:text-primary font-medium transition-colors duration-300"
+                class="block text-light-text dark:text-dark-text hover:text-light-primary dark:hover:text-dark-primary transition-colors duration-300"
               >
                 {item.name}
               </a>

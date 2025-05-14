@@ -8,7 +8,7 @@ import SocialLinks from './SocialLinks.astro';
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <div>
-        <h3 class="text-2xl font-bold text-primary mb-4">
+        <h3 class="text-2xl font-bold text-light-primary dark:text-dark-primary mb-4">
           Let's Connect
         </h3>
         
@@ -18,33 +18,33 @@ import SocialLinks from './SocialLinks.astro';
         
         <div class="space-y-4 mb-8">
           <div class="flex items-start gap-4">
-            <div class="p-3 bg-primary/20 rounded-full text-primary">
+            <div class="p-3 bg-light-primary/20 dark:bg-dark-primary/20 rounded-full text-light-primary dark:text-dark-primary">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
             <div>
-              <h4 class="text-lg font-medium text-white">Email</h4>
-              <a href="mailto:your.name@example.com" class="text-primary hover:text-primary-light">your.name@example.com</a>
+              <h4 class="text-lg font-medium text-light-text dark:text-dark-text">Email</h4>
+              <a href="mailto:your.name@example.com" class="text-light-primary dark:text-dark-primary hover:opacity-80">your.name@example.com</a>
             </div>
           </div>
           
           <div class="flex items-start gap-4">
-            <div class="p-3 bg-primary/20 rounded-full text-primary">
+            <div class="p-3 bg-light-primary/20 dark:bg-dark-primary/20 rounded-full text-light-primary dark:text-dark-primary">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
             <div>
-              <h4 class="text-lg font-medium text-white">Location</h4>
+              <h4 class="text-lg font-medium text-light-text dark:text-dark-text">Location</h4>
               <p>San Francisco, California</p>
             </div>
           </div>
         </div>
         
         <div>
-          <h4 class="text-lg font-medium text-white mb-3">
+          <h4 class="text-lg font-medium text-light-text dark:text-dark-text mb-3">
             Follow Me
           </h4>
           <SocialLinks />
@@ -52,54 +52,54 @@ import SocialLinks from './SocialLinks.astro';
       </div>
       
       <div>
-        <form class="card p-6 lg:p-8">
+        <form class="bg-white/5 backdrop-blur-md border border-white/20 rounded-xl p-6 lg:p-8">
           <div class="mb-6">
-            <label for="name" class="block mb-2 text-sm font-medium text-white/80">
+            <label for="name" class="block mb-2 text-sm font-medium text-light-text dark:text-dark-text">
               Your Name
             </label>
             <input
               type="text"
               id="name"
-              class="w-full px-4 py-3 bg-surface/60 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-white placeholder-white/50"
+              class="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-light-primary/50 dark:focus:ring-dark-primary/50 text-light-text dark:text-dark-text placeholder-light-muted dark:placeholder-dark-muted"
               placeholder="John Doe"
               required
             />
           </div>
           
           <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm font-medium text-white/80">
+            <label for="email" class="block mb-2 text-sm font-medium text-light-text dark:text-dark-text">
               Email Address
             </label>
             <input
               type="email"
               id="email"
-              class="w-full px-4 py-3 bg-surface/60 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-white placeholder-white/50"
+              class="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-light-primary/50 dark:focus:ring-dark-primary/50 text-light-text dark:text-dark-text placeholder-light-muted dark:placeholder-dark-muted"
               placeholder="john@example.com"
               required
             />
           </div>
           
           <div class="mb-6">
-            <label for="subject" class="block mb-2 text-sm font-medium text-white/80">
+            <label for="subject" class="block mb-2 text-sm font-medium text-light-text dark:text-dark-text">
               Subject
             </label>
             <input
               type="text"
               id="subject"
-              class="w-full px-4 py-3 bg-surface/60 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-white placeholder-white/50"
+              class="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-light-primary/50 dark:focus:ring-dark-primary/50 text-light-text dark:text-dark-text placeholder-light-muted dark:placeholder-dark-muted"
               placeholder="Project Inquiry"
               required
             />
           </div>
           
           <div class="mb-6">
-            <label for="message" class="block mb-2 text-sm font-medium text-white/80">
+            <label for="message" class="block mb-2 text-sm font-medium text-light-text dark:text-dark-text">
               Message
             </label>
             <textarea
               id="message"
               rows="4"
-              class="w-full px-4 py-3 bg-surface/60 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 text-white placeholder-white/50 resize-none"
+              class="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-light-primary/50 dark:focus:ring-dark-primary/50 text-light-text dark:text-dark-text placeholder-light-muted dark:placeholder-dark-muted resize-none"
               placeholder="Your message here..."
               required
             ></textarea>
