@@ -78,7 +78,7 @@ const categories = [
       <div class="inline-flex flex-wrap justify-center gap-2 p-1 bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-lg shadow-md ring-1 ring-white/10" role="group" id="project-filters">
         {categories.map((category) => (
           <button 
-            class="px-4 py-2 text-sm font-medium rounded-md transition-all duration-300 hover:bg-light-primary/20 dark:hover:bg-dark-primary/20"
+            class="px-4 py-2 text-sm font-medium text-white rounded-md transition-all duration-300 hover:bg-light-primary/20 dark:hover:bg-dark-primary/20 hover:text-white"
             data-filter={category.id}
             data-active={category.id === 'all' ? 'true' : 'false'}
           >
@@ -135,7 +135,7 @@ const categories = [
               
               <div class="flex flex-wrap gap-2 mt-auto">
                 {project.technologies.map(tech => (
-                  <span class="text-xs px-2 py-1 bg-light-primary/10 dark:bg-dark-primary/10 text-light-primary dark:text-dark-primary rounded-full">
+                  <span class="tag">
                     {tech}
                   </span>
                 ))}
@@ -171,10 +171,10 @@ const categories = [
     // Update active state of filter buttons
     projectFilters.forEach(btn => {
       if (btn.dataset.filter === category) {
-        btn.classList.add('bg-light-primary', 'dark:bg-dark-primary', 'text-white');
+        btn.classList.add('bg-light-primary', 'dark:bg-dark-primary', 'text-black');
         btn.dataset.active = 'true';
       } else {
-        btn.classList.remove('bg-light-primary', 'dark:bg-dark-primary', 'text-white');
+        btn.classList.remove('bg-light-primary', 'dark:bg-dark-primary', 'text-black');
         btn.dataset.active = 'false';
       }
     });

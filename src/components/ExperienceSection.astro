@@ -54,12 +54,7 @@ const experiences = [
           </div>
 
           <!-- Glass Card -->
-          <div class={`relative z-10 mt-6 md:mt-0
-            bg-white/80 dark:bg-white/5 backdrop-blur-md
-            border border-white/40 dark:border-white/10
-            ring-1 ring-white/20 dark:ring-white/10
-            rounded-xl shadow-xl transition-all duration-300
-            ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
+          <div class={`relative z-10 mt-6 md:mt-0 card ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
             
             <div class="p-6">
               <!-- Header -->
@@ -90,7 +85,7 @@ const experiences = [
               <!-- Tech Badges -->
               <div class="flex flex-wrap gap-2">
                 {exp.technologies.map(tech => (
-                  <span class="text-xs px-2 py-1 bg-primary/10 dark:bg-primary/20 text-primary-700 dark:text-primary-300 rounded-full whitespace-nowrap">
+                  <span class="tag">
                     {tech}
                   </span>
                 ))}
