@@ -38,14 +38,18 @@ const experiences = [
 
     <div class="relative max-w-4xl mx-auto">
       <!-- Timeline Vertical Line -->
-      <div class="absolute top-0 left-[22px] md:left-1/2 w-[3px] h-full bg-light-primary/20 dark:bg-dark-primary/20 md:-translate-x-1/2 z-0"></div>
+      <div class={`absolute top-0 left-[22px] md:left-1/2 w-[3px] h-full bg-light-primary/20 dark:bg-dark-primary/20 md:-translate-x-1/2 z-0`}></div>
 
       {experiences.map((exp, index) => (
         <div
-          class={`relative mb-16 md:w-1/2 ${index % 2 === 0 ? 'ml-auto md:pr-12 md:text-right' : 'mr-auto md:pl-12 md:text-left'}`}
+          class={`relative mb-16 md:w-1/2
+            ${index % 2 === 0 
+              ? 'ml-auto md:pr-12 md:text-right md:translate-x-[-33px]' 
+              : 'mr-auto md:pl-12 md:text-left md:translate-x-[38px]'
+            } transition-transform duration-300`}
         >
           <!-- Timeline Dot -->
-          <div class="absolute top-0 left-[22px] md:left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+          <div class={`absolute top-0 left-[22px] ${index % 2 === 0 ? 'md:left-[33px]' : 'md:left-auto md:right-[18px]'} transform -translate-x-1/2 -translate-y-1/2 z-10`}>
             <div class="w-5 h-5 rounded-full bg-light-primary dark:bg-dark-primary shadow-md ring-2 ring-white/70 dark:ring-white/30 flex items-center justify-center">
               <div class="w-2.5 h-2.5 bg-white dark:bg-dark-100 rounded-full"></div>
             </div>
