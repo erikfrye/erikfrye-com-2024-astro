@@ -32,23 +32,21 @@ const experiences = [
 
 <section id="experience" class="py-20">
   <div class="container-custom">
-    <h2 class="text-center text-3xl font-bold text-gray-900 dark:text-white mb-16" data-aos="fade-up">
+    <h2 class="text-center text-3xl font-bold text-gray-900 dark:text-white mb-16">
       Work Experience
     </h2>
 
     <div class="relative max-w-4xl mx-auto">
       <!-- Timeline Vertical Line -->
-      <div class="absolute top-0 left-[22px] md:left-1/2 w-[3px] h-full bg-primary-400 dark:bg-primary/40 backdrop-blur-md md:-translate-x-1/2 z-0 transition-colors duration-300"></div>
+      <div class="absolute top-0 left-[22px] md:left-1/2 w-[3px] h-full bg-light-primary/20 dark:bg-dark-primary/20 md:-translate-x-1/2 z-0"></div>
 
       {experiences.map((exp, index) => (
         <div
           class={`relative mb-16 md:w-1/2 ${index % 2 === 0 ? 'ml-auto md:pr-12 md:text-right' : 'mr-auto md:pl-12 md:text-left'}`}
-          data-aos="fade-up"
-          data-aos-delay={(index * 100) + 200}
         >
           <!-- Timeline Dot -->
           <div class="absolute top-0 left-[22px] md:left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div class="w-5 h-5 rounded-full bg-primary-500 dark:bg-primary-300 shadow-md ring-2 ring-white/70 dark:ring-white/30 flex items-center justify-center">
+            <div class="w-5 h-5 rounded-full bg-light-primary dark:bg-dark-primary shadow-md ring-2 ring-white/70 dark:ring-white/30 flex items-center justify-center">
               <div class="w-2.5 h-2.5 bg-white dark:bg-dark-100 rounded-full"></div>
             </div>
           </div>
@@ -97,4 +95,3 @@ const experiences = [
     </div>
   </div>
 </section>
-
