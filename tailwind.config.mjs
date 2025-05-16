@@ -9,8 +9,8 @@ export default {
       },
       colors: {
         light: {
-          background: '#F9FAFB',
-          surface: '#FFFFFF',
+          background: '#F3F4F6',
+          surface: '#F9FAFB',
           primary: '#4F46E5',
           secondary: '#EC4899',
           accent: '#6366F1',
