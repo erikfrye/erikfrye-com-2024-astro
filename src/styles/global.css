@@ -63,6 +63,6 @@
   }
 
   .tag {
-    @apply text-xs px-2 py-1 bg-light-primary/10 dark:bg-dark-primary/10 text-light-primary dark:text-dark-primary rounded-full;
+    @apply text-xs px-2 py-1 bg-light-primary/20 text-light-primary dark:bg-dark-primary/10 dark:text-dark-primary rounded-full font-medium;
   }
 }
