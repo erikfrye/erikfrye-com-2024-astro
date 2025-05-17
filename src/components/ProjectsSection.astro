@@ -78,7 +78,7 @@ const categories = [
       <div class="inline-flex flex-wrap justify-center gap-2 p-1 bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-lg shadow-md ring-1 ring-white/10" role="group" id="project-filters">
         {categories.map((category) => (
           <button 
-            class="px-4 py-2 text-sm font-medium text-white rounded-md transition-all duration-300 hover:bg-light-primary/20 dark:hover:bg-dark-primary/20 hover:text-white"
+            class="px-4 py-2 text-sm text-light-text dark:text-dark-text rounded-md transition-all duration-300 hover:bg-light-primary/20 dark:hover:bg-dark-primary/20 hover:text-white"
             data-filter={category.id}
             data-active={category.id === 'all' ? 'true' : 'false'}
           >
