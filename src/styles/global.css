@@ -69,8 +69,9 @@
   .filter-button {
      @apply  px-4 py-2 text-sm text-light-text dark:text-dark-text rounded-md transition-all duration-300 hover:bg-light-primary/20 dark:hover:bg-dark-primary/20 hover:text-white
 
-    &[data-active="true"] {
-      @apply text-dark-text dark:text-light-text
-    }
+    
+  }
+  .filter-button[data-active="true"] {
+    @apply text-dark-text dark:text-light-text
   }
 }
