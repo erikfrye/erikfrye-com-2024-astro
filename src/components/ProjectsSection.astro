@@ -2,71 +2,67 @@
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "D2L.com",
     description: "A modern e-commerce platform with cart functionality, user authentication, and payment processing integration.",
     image: "https://images.pexels.com/photos/6956903/pexels-photo-6956903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["React", "Next.js", "Stripe", "Tailwind CSS"],
-    demoLink: "#",
-    codeLink: "#",
-    category: "web"
+    technologies: ["Wordpress", "WP Engine", "SCSS", "JS", "PHP" ],
+    demoLink: "https://www.d2l.com/",
+    category: "professional"
   },
   {
     id: 2,
-    title: "Task Management App",
+    title: "Family Blog",
     description: "A productivity application with drag-and-drop task management, reminders, and team collaboration features.",
     image: "https://images.pexels.com/photos/8391140/pexels-photo-8391140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["Vue.js", "Firebase", "Sass"],
-    demoLink: "#",
-    codeLink: "#",
-    category: "web"
+    technologies: ["Wordpress", "PHP", "Child Themes"],
+    demoLink: "https://www.sideoffryes.com/",
+    category: "personal"
   },
   {
     id: 3,
-    title: "Travel Blog",
+    title: "RevisionKW",
     description: "A personal travel blog with a custom CMS, image galleries, and interactive maps showing travel routes.",
     image: "https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["Astro", "Tailwind CSS", "Markdown"],
-    demoLink: "#",
-    codeLink: "#",
-    category: "web"
+    technologies: ["HTML/CSS", "JS", "Netlify"],
+    demoLink: "https://www.revisionkw.com/",
+    codeLink: "https://github.com/erikfrye/revisionkw/",
+    category: "personal"
   },
   {
     id: 4,
-    title: "Weather Dashboard",
+    title: "Login Finder",
     description: "A weather application that displays current conditions and forecasts based on user location or search.",
     image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["JavaScript", "Weather API", "HTML/CSS"],
-    demoLink: "#",
-    codeLink: "#",
-    category: "app"
+    technologies: ["VueJS", "AWS S3", "Docker", "NodeJS"],
+    demoLink: "https://login-finder.d2l.com/",
+    category: "professional"
   },
   {
     id: 5,
-    title: "Portfolio Template",
+    title: "Golf Blog",
     description: "A customizable portfolio template for developers and designers to showcase their work and skills.",
     image: "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["Astro", "Tailwind CSS", "TypeScript"],
-    demoLink: "#",
+    technologies: ["Wordpress", "Static Site Generator", "Netlify"],
+    demoLink: "https://www.golfixation.com",
     codeLink: "#",
-    category: "design"
+    category: "personal"
   },
   {
     id: 6,
-    title: "Recipe Sharing Platform",
+    title: "Personal Website",
     description: "A community-driven platform for sharing and discovering recipes with ratings and comments.",
     image: "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    technologies: ["React", "Node.js", "MongoDB"],
-    demoLink: "#",
-    codeLink: "#",
-    category: "app"
+    technologies: ["Astro", "Tailwind CSS", "TypeScript"],
+    demoLink: "https://erikfrye.com/",
+    codeLink: "https://github.com/erikfrye/erikfrye-com-2024-astro",
+    category: "personal"
   }
 ];
 
 const categories = [
   { id: "all", name: "All Projects" },
-  { id: "web", name: "Web" },
-  { id: "app", name: "Applications" },
-  { id: "design", name: "Design" }
+  { id: "professional", name: "Professional" },
+  { id: "personal", name: "Personal" },
 ];
 ---
 
@@ -105,25 +101,29 @@ const categories = [
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-4 w-full">
                   <div class="flex gap-3 justify-end">
+                    { project.demoLink && 
                     <a 
                       href={project.demoLink} 
                       class="p-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full hover:bg-white/40 transition-colors duration-300"
-                      aria-label="View live demo"
+                      aria-label="View live demo" target="_blank"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                       </svg>
                     </a>
+                    }
+                    { project.codeLink && 
                     <a 
                       href={project.codeLink} 
                       class="p-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full hover:bg-white/40 transition-colors duration-300"
-                      aria-label="View source code"
+                      aria-label="View source code" target="_blank" rel="noopener noreferrer"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                       </svg>
                     </a>
+                    }
                   </div>
                 </div>
               </div>
