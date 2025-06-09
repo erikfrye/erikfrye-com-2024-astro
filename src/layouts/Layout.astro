@@ -50,6 +50,11 @@ const {
       }
 
       window.localStorage.setItem("theme", theme);
+
+      // Initialize TAOS
+      import('taos/dist/taos.js').then(({ default: taos }) => {
+        taos.init();
+      });
     </script>
   </body>
 </html>

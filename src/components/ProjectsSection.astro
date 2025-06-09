@@ -68,9 +68,9 @@ const categories = [
 
 <section id="projects" class="section-padding bg-light-300 dark:bg-dark-200 transition-colors duration-300">
   <div class="container-custom">
-    <h2 class="section-title">My Projects</h2>
+    <h2 class="section-title taos:scale-[0.6] taos:opacity-0" data-taos-offset="300">My Projects</h2>
     
-    <div class="flex justify-center mb-10">
+    <div class="flex justify-center mb-10 taos:translate-y-[200px] taos:opacity-0" data-taos-offset="300">
       <div class="inline-flex flex-wrap justify-center gap-2 p-1 bg-white/20 dark:bg-white/10 backdrop-blur-sm rounded-lg shadow-md ring-1 ring-white/10" role="group" id="project-filters">
         {categories.map((category) => (
           <button 
@@ -85,10 +85,12 @@ const categories = [
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <div 
-          class="project-card transition-all duration-300"
+          class="project-card transition-all duration-300 taos:scale-[0.6] taos:opacity-0"
           data-category={project.category}
+          data-taos-offset="300"
+          data-taos-delay={index * 100}
         >
           <div class="card group h-full flex flex-col">
             <div class="relative overflow-hidden rounded-t-xl">
