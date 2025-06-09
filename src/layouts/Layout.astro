@@ -15,7 +15,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +37,6 @@ const {
       const theme = (() => {
         if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
           return localStorage.getItem("theme");
-        
         }
         
         return "dark";
@@ -51,11 +50,14 @@ const {
 
       window.localStorage.setItem("theme", theme);
 
-      // Initialize TAOS
-      import('taos/dist/taos.js').then(() => {
-        if (window.taos) {
-          window.taos.init();
-        }
+      // Initialize AOS
+      import('aos').then((AOS) => {
+        AOS.default.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true,
+          offset: 100
+        });
       });
     </script>
   </body>

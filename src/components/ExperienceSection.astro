@@ -32,7 +32,7 @@ const experiences = [
 
 <section id="experience" class="py-20">
   <div class="container-custom">
-    <h2 class="text-center text-3xl font-bold text-gray-900 dark:text-white mb-16 taos:scale-[0.6] taos:opacity-0" data-taos-offset="300">
+    <h2 class="text-center text-3xl font-bold text-gray-900 dark:text-white mb-16" data-aos="zoom-in" data-aos-offset="300">
       Work Experience
     </h2>
 
@@ -42,13 +42,14 @@ const experiences = [
 
       {experiences.map((exp, index) => (
         <div
-          class={`relative mb-16 md:w-1/2 taos:translate-y-[200px] taos:opacity-0
+          class={`relative mb-16 md:w-1/2
             ${index % 2 === 0 
               ? 'ml-auto md:pr-12 md:text-right md:translate-x-[-33px]' 
               : 'mr-auto md:pl-12 md:text-left md:translate-x-[38px]'
             } transition-transform duration-300`}
-          data-taos-offset="300"
-          data-taos-delay={index * 200}
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-delay={index * 200}
         >
           <!-- Timeline Dot -->
           <div class={`absolute top-0 left-[22px] ${index % 2 === 0 ? 'md:left-[33px]' : 'md:left-auto md:right-[18px]'} transform -translate-x-1/2 -translate-y-1/2 z-10`}>
